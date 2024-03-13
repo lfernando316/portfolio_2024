@@ -1,0 +1,79 @@
+body {
+  background-color: #06071b; 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  font-size: 16px;
+  color:#acacb5;
+  font-family: "Open Sans", sans-serif;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.titulo_spand2 {
+  background: #1b98f5;
+  background: linear-gradient(to right, #1b98f5 22%, #0df4ad 75%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button_contact {
+  height: 44px;
+  background-color: #0cfca7;
+  color: #06071b;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  font-weight: 600;
+  transition: box-shadow 0.5s, transform 0.2s;
+  display: flex;
+  border: 2px solid #0cfca7;
+}
+.button_contact:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 10px rgba(12, 252, 167, 0.6),
+    0 0 5px rgba(12, 252, 167, 0.4);
+}
+
+textarea {
+  resize: none;
+  overflow: hidden;
+}
+
+
+/* padding: 2rem; */
+
+
+/* @import './base.css'; */
+
+/* #app {
+  font-weight: normal;
+} */
+
+/* a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+} */
+
+/* @media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+} */
+
+/* @media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  } */
+
+  /* #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  } */
+/* } */
