@@ -35,7 +35,22 @@ export default {
         a objetivos, priorizando siempre la calidad del código como clave del
         proyecto.
       </p>
-      <button class="button_contact mt-4">Contáctame</button>
+      <div class="d-flex justify-content-between mt-4">
+        <button class="button_contact">Contáctame</button>
+        <div class="d-flex gap-3 align-items-center fs-1 me-3">
+          <a
+            href="https://www.linkedin.com/in/luis-fernando-salcedo"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin boton_redes"
+          /></a>
+          <a href="https://github.com/lfernando316 " target="_blank"
+            ><i class="fa-brands fa-github boton_redes"
+          /></a>
+          <a href="https://wa.me/message/F74B2XUM7BXCP1 " target="_blank"
+            ><i class="fa-brands fa-square-whatsapp boton_redes"
+          /></a>
+        </div>
+      </div>
     </div>
 
     <!-- <div>holaaaa</div> -->
@@ -106,7 +121,7 @@ export default {
 .overflow-container {
   overflow: hidden;
   height: 500px; /* Ajusta la altura según tus necesidades */
-  width: 250px;
+  width: 200px;
   padding: 0;
   margin-right: 10px;
 }
@@ -124,9 +139,34 @@ export default {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(
-      -50%
-    ); /* Ajusta el porcentaje según el número de imágenes y su altura */
+    transform: translateY(-50%);
+  }
+}
+
+.boton_redes {
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #1b98f5;
+  animation: shake 0.5s ease infinite;
+}
+
+.boton_redes:hover {
+  transform: translateY(-5px);
+  color: #0df4ad;
+  animation: none;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+  75%,
+  25% {
+    transform: rotate(-8deg);
   }
 }
 </style>

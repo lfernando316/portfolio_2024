@@ -1,7 +1,7 @@
 <script></script>
 
 <template>
-  <div class="d-flex flex-column align-items-center">
+  <div class="d-flex flex-column align-items-center justify-content-center">
     <h2 class="fs-1 text-white fw-bold">Mis Habilidades</h2>
     <p class="text-center">
       he desarrollado proyectos y en constante capacitacion en las siguientes
@@ -88,7 +88,7 @@
     </div>
     <div class="fs-2 text-white fw-bold pt-2">Certificados</div>
 
-    <div class="d-flex flex-wrap gap-3 pt-5">
+    <div class="d-flex flex-wrap gap-3 pt-5 justify-content-center">
       <div
         class="card_certificado gradient_certificado1 d-flex flex-column align-items-center"
       >
