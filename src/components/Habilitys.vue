@@ -1,15 +1,15 @@
 <script></script>
 
 <template>
-  <div class="d-flex flex-column align-items-center justify-content-center">
+  <div class="d-flex flex-column align-items-center" id="habilidades">
     <h2 class="fs-1 text-white fw-bold">Mis Habilidades</h2>
     <p class="text-center">
-      he desarrollado proyectos y en constante capacitacion en las siguientes
+      He desarrollado proyectos y en constante capacitacion en las siguientes
       tecnologias <br />
       lo cual me hace una persona versatil para trabajar en cualquiera de las
-      areas.
+      áreas.
     </p>
-    <div class="row flex-wrap pt-4 p-2">
+    <div class="row p-3">
       <div class="col-md-6 mb-3">
         <div class="card1 gradient1 p-4">
           <div class="card_title">
@@ -17,28 +17,29 @@
             <h4 class="fs-3">Tecnologias</h4>
           </div>
           <p class="" style="color: #acacb5">
-            Desarrollo soluciones tecnologicas con lenguajes como:
+            Desarrollo soluciones tecnológicas, trabajando con diversos
+            lenguajes, entre los cuales se incluyen:
           </p>
-          <div class="row flex-wrap gap-2 p-2">
-            <div class="chip col-md-4">
+          <div class="row gap-2 ms-1">
+            <div class="chip col-md-3 col-5">
               <i class="fa-brands fa-js me-2" />
               <span>Javascript</span>
             </div>
 
-            <div class="chip col-md-4">
+            <div class="chip col-md-3 col-5">
               <i class="fa-brands fa-react me-2" />
               <span>React</span>
             </div>
-            <div class="chip col-md-4">
+            <div class="chip col-md-3 col-5">
               <i class="fa-brands fa-vuejs me-2" />
               <span>Vue js</span>
             </div>
 
-            <div class="chip col-md-4">
+            <div class="chip col-md-3 col-5">
               <i class="fa-brands fa-html5 me-2" />
               <span>Html5</span>
             </div>
-            <div class="chip col-md-4">
+            <div class="chip col-md-3 col-5">
               <i class="fa-brands fa-css3-alt me-2" />
               <span>Css3</span>
             </div>
@@ -53,32 +54,34 @@
             <h4 class="fs-3">Tecnologias</h4>
           </div>
           <p class="" style="color: #acacb5">
-            Desarrollo soluciones tecnologicas con lenguajes como:
+            Con enfoque y experiencia en el desarrollo backend, disfruto
+            construyendo soluciones tecnológicas utilizando diversos lenguajes,
+            abarcando:
           </p>
-          <div class="row flex-wrap gap-2 p-2">
-            <div class="chip col-md-4">
+          <div class="row gap-2 ms-1">
+            <div class="chip col-md-3 col-5">
               <i class="fa-brands fa-python me-2" />
               <span>Python</span>
             </div>
-            <div class="chip col-md-4">
+            <div class="chip col-md-3 col-5">
               <i class="fa-brands fa-python me-2" />
               <span>Django</span>
             </div>
 
-            <div class="chip col-md-4">
+            <div class="chip col-md-3 col-5">
               <i class="fa-brands fa-php me-2" />
               <span>Php</span>
             </div>
-            <div class="chip col-md-4">
+            <div class="chip col-md-3 col-5">
               <i class="fa-brands fa-node me-2" />
               <span>Node js</span>
             </div>
 
-            <div class="chip col-md-4">
+            <div class="chip col-md-3 col-5">
               <i class="fa-solid fa-database me-2" />
               <span>MySql</span>
             </div>
-            <div class="chip col-md-4">
+            <div class="chip col-md-3 col-5">
               <i class="fa-solid fa-database me-2" />
               <span>Postgress</span>
             </div>
@@ -94,11 +97,11 @@
       >
         <img class="icon_cert" src="/graduado.svg" alt="" />
         <h2 class="fs-3 text-white fw-bold">Academlo</h2>
-        <p class="px-2">
+        <!-- <p class="px-2">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea provident
           laborum, maxime, nemo, nesciunt sed recusandae, quisquam nemo ut
           necessitatibus.
-        </p>
+        </p> -->
         <ul class="align-self-start">
           <li>
             <a
@@ -140,11 +143,11 @@
       >
         <img class="icon_cert" src="/computer.svg" alt="" />
         <h2 class="fs-3 text-white fw-bold">Platzi</h2>
-        <p class="px-2">
+        <!-- <p class="px-2">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea provident
           laborum, maxime, nemo, nesciunt sed recusandae, quisquam nemo ut
           necessitatibus.
-        </p>
+        </p> -->
         <ul class="align-self-start">
           <li>
             <a
@@ -177,11 +180,11 @@
       >
         <img class="icon_cert" src="/certificado.svg" alt="" />
         <h2 class="fs-3 text-white fw-bold">CoderHouse</h2>
-        <p class="px-2">
+        <!-- <p class="px-2">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea provident
           laborum, maxime, nemo, nesciunt sed recusandae, quisquam nemo ut
           necessitatibus.
-        </p>
+        </p> -->
         <ul class="align-self-start">
           <li>
             <a
@@ -210,7 +213,7 @@
 
 .card1 {
   /* Personaliza el borde, el espacio, el sombreado, etc. */
-  width: 350px;
+  width: 100%;
   border: none !important;
   border-radius: 10px;
   opacity: 0.8;
@@ -276,6 +279,7 @@
   transition: opacity 0.3s ease;
   transition: transform 0.3s ease;
   margin-bottom: 15px;
+  color: #acacb5;
 }
 
 .card_certificado:hover {

@@ -16,8 +16,8 @@ export default {
 </script>
 
 <template>
-  <div class="row flex-wrap col-12 justify-content-between mt-2 px-2">
-    <div class="col-md-6 py-5">
+  <div class="row flex-wrap col-12 justify-content-between contain" id="home">
+    <div class="col-md-6 home">
       <h1 class="titulo">
         <span class="titulo_span1">Hola,</span><br />
         <span class="titulo_spand2">
@@ -55,9 +55,9 @@ export default {
 
     <!-- <div>holaaaa</div> -->
     <!-- <div class="d-flex justify-content-end"> -->
-    <div class="container col-md-6">
-      <div class="row flex-nowrap col-12 justify-content-center">
-        <div class="overflow-container">
+    <div class="container col-md-6 col-12">
+      <div class="row flex-nowrap col-12 justify-content-end">
+        <div class="overflow_container">
           <div class="contImg d-flex flex-column">
             <!-- Duplicamos las imágenes para lograr el efecto continuo -->
             <img
@@ -76,7 +76,7 @@ export default {
             />
           </div>
         </div>
-        <div class="overflow-container">
+        <div class="overflow_container">
           <div class="contImg2 d-flex flex-column">
             <!-- Duplicamos las imágenes para lograr el efecto continuo -->
             <img
@@ -102,9 +102,23 @@ export default {
 </template>
 
 <style>
+/* padding: 8px; */
+.contain {
+  margin-top: 75px;
+}
+.home {
+  padding-left: 10px;
+  min-height: 100vh;
+}
+
 .titulo {
   font-size: 54px;
   font-weight: 550;
+}
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 41px;
+  }
 }
 .titulo_span1 {
   color: #ffffff;
@@ -118,16 +132,20 @@ export default {
 } */
 
 /* overflow: hidden; */
-.overflow-container {
+.container {
+  padding: 0;
+  /* padding-left: 60px; */
+}
+.overflow_container {
   overflow: hidden;
   height: 500px; /* Ajusta la altura según tus necesidades */
   width: 200px;
   padding: 0;
-  margin-right: 10px;
 }
 
 .contImg {
   animation: scrollUp 20s linear infinite; /* Ajusta la duración de la animación según tus necesidades */
+  margin-right: 10px;
 }
 
 .contImg2 {

@@ -1,5 +1,17 @@
 <template>
-  <div class="container">
+  <div
+    class="d-flex flex-column align-items-center justify-content-center"
+    id="proyectos"
+  >
+    <h2 class="fs-1 text-white fw-bold">Proyectos</h2>
+    <p class="text-center">
+      Entre algunos de mis proyectos donde he aplicado mis habilidades se
+      encuentran desarrollos web y pequeñas aplicaciones. <br />
+      Cada uno ha sido una oportunidad para aprender y crecer, mejorando mis
+      habilidades técnicas y mi capacidad para resolver problemas
+    </p>
+  </div>
+  <div class="container_swiper">
     <swiper
       :navigation="true"
       :modules="modules"
@@ -7,19 +19,42 @@
       :slides-per-view="slidesPerView"
       :space-between="spaceBetween"
       @reachEnd="handleSwiperEnd"
-      autoplay
     >
-      <swiper-slide v-for="image in images" :key="image.src">
+      <swiper-slide class="p-5" v-for="image in images" :key="image.src">
         <div class="card">
+          <!-- <div class="card-img"> -->
           <img :src="image.src" :alt="image.alt" />
+          <!-- </div> -->
           <div class="card-description">
             <div class="card-title">
               <h4>{{ image.title }}</h4>
             </div>
             <p>{{ image.description }}</p>
           </div>
-          <div class="card-link">
-            <a href="#">Ver más</a>
+          <div class="card-link d-flex justify-content-center gap-3">
+            <div class="">
+              <a
+                class="text-decoration-none d-flex flex-column"
+                target="_blank"
+                :href="image.urlProyecto"
+              >
+                <i class="fa-brands fa-chrome"></i>
+
+                Desplegar <br />
+                proyecto
+              </a>
+            </div>
+            <div class="">
+              <a
+                class="text-decoration-none d-flex flex-column"
+                target="_blank"
+                :href="image.urlCodigo"
+              >
+                <i class="fa-brands fa-github"></i>
+                Abrir <br />
+                código
+              </a>
+            </div>
           </div>
         </div>
       </swiper-slide>
@@ -41,51 +76,67 @@ export default {
   setup() {
     const images = [
       {
-        src: "/imagen1.jfif",
-        alt: "Imagen 1",
-        title: "Descripción",
+        src: "/screenshotrickandmorty.png",
+        alt: "imagen_app",
+        title: "Rick and Morty app",
+        urlCodigo: "https://github.com/lfernando316/apprickandmorty",
+        urlProyecto: "https://rickandmortylfsr.netlify.app/",
         description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos deserunt animi inventore repellat illo sunt error consequuntur odit ducimus eaque.",
+          "Aplicación hecha en React utilizando la API de rick and morty",
       },
       {
-        src: "/imagen2.jfif",
-        alt: "Imagen 2",
-        title: "Descripción",
+        src: "/pokeapp.png",
+        alt: "imagen_app",
+        title: "Poke app",
+        urlCodigo: "https://github.com/lfernando316/pokeApp",
+        urlProyecto: "https://pokeapplfsr.netlify.app",
         description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos deserunt animi inventore repellat illo sunt error consequuntur odit ducimus eaque.",
+          " Aplicación hecha con React router y Redux consumiendo la API de pokemon",
       },
       {
-        src: "/imagen3.jfif",
+        src: "/weather_app.png",
+        alt: "imagen_app",
+        title: "Weather app ",
+        urlCodigo: "https://github.com/lfernando316/Weather-App",
+        urlProyecto: "https://weather-app-lfsr.netlify.app",
+        description:
+          "Aplicación hecha en React utilizando una api, genera el clima segun tu ubicación",
+      },
+
+      {
+        src: "/quoterandom.png",
+        alt: "imagen_app",
+        title: "Quote Ramdon app",
+        urlCodigo: "https://github.com/lfernando316/QuoteRamdon",
+        urlProyecto: "https://quoterandomlfsr.netlify.app/",
+        description:
+          "Aplicación hecha en React utilizando un archivo json, genera frases y colores aleatorios.",
+      },
+
+      {
+        src: "/bananaburguesa.png",
+        alt: "imagen_app",
+        title: "Sitio web",
+        urlCodigo:
+          "https://github.com/lfernando316/BananaBurguesa-luisFernandoSalcedo",
+        urlProyecto: "https://bananaburguesa.netlify.app",
+        description: "Sitio Web creado con HTML y CSS usando el framework SASS",
+      },
+      {
+        src: "/bananaburguesa.png",
         alt: "Imagen 3",
         title: "Descripción",
+        urlCodigo: "https://github.com/lfernando316/Weather-App",
+        urlProyecto: "https://weather-app-lfsr.netlify.app",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos deserunt animi inventore repellat illo sunt error consequuntur odit ducimus eaque.",
       },
       {
-        src: "/imagen4.jfif",
-        alt: "Imagen 4",
-        title: "Descripción",
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos deserunt animi inventore repellat illo sunt error consequuntur odit ducimus eaque.",
-      },
-      {
-        src: "/imagen2.jfif",
-        alt: "Imagen 2",
-        title: "Descripción",
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos deserunt animi inventore repellat illo sunt error consequuntur odit ducimus eaque.",
-      },
-      {
-        src: "/imagen3.jfif",
+        src: "/bananaburguesa.png",
         alt: "Imagen 3",
         title: "Descripción",
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos deserunt animi inventore repellat illo sunt error consequuntur odit ducimus eaque.",
-      },
-      {
-        src: "/imagen4.jfif",
-        alt: "Imagen 4",
-        title: "Descripción",
+        urlCodigo: "https://github.com/lfernando316/Weather-App",
+        urlProyecto: "https://weather-app-lfsr.netlify.app",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos deserunt animi inventore repellat illo sunt error consequuntur odit ducimus eaque.",
       },
@@ -93,15 +144,17 @@ export default {
 
     const modules = [Navigation];
 
-    let slidesPerView = ref(3);
-    let spaceBetween = 20;
+    let slidesPerView = ref(4);
+    let spaceBetween = 10;
 
     // Función para manejar los cambios en el ancho de la ventana
     const handleWindowResize = () => {
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 600) {
         slidesPerView.value = 1;
-      } else {
+      } else if (window.innerWidth < 1000) {
         slidesPerView.value = 3;
+      } else {
+        slidesPerView.value = 4;
       }
     };
 
@@ -112,9 +165,7 @@ export default {
     handleWindowResize();
 
     const handleSwiperEnd = (swiper) => {
-      // Comprobamos si estamos al final del swiper
       if (swiper.isEnd) {
-        // Si estamos al final, intentamos ir al primer slide
         swiper.slideToLoop(0);
       }
     };
@@ -126,16 +177,11 @@ export default {
       handleSwiperEnd,
     };
   },
-  // watch: {
-  //   "window.innerWidth"() {
-  //     console.log("holaa");
-  //   },
-  // },
 };
 </script>
 
 <style>
-.swiper-container {
+.container_swiper {
   width: 100%;
 }
 
@@ -145,26 +191,43 @@ export default {
 }
 
 .card {
-  width: 300px; /* Ancho de cada tarjeta */
-  margin-right: 20px; /* Espacio entre tarjetas */
+  width: 250px; /* Ancho de cada tarjeta */
+  height: 450px;
+  margin-right: 10px; /* Espacio entre tarjetas */
+  position: relative;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: none;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0);
+  overflow-wrap: normal;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.05);
 }
 
 .card img {
   width: 100%;
-  height: auto;
+  height: 200px;
+  margin: 0; /* Elimina el margen */
+  padding: 0;
 }
 
+.card-title {
+  color: #0df4ad;
+}
 .card-description {
-  padding: 20px;
+  padding: 10px;
+  color: #acacb5;
 }
 
 .card-link {
   text-align: center;
   padding-bottom: 20px;
+  padding-bottom: 8px;
 }
 
 .card-link a {
-  color: blue;
+  color: #1b98f5;
 }
 
 /*  */

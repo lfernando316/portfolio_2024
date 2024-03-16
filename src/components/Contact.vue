@@ -33,14 +33,14 @@ export default {
 };
 </script>
 <template>
-  <div class="content_form">
+  <div class="content_form" id="contacto">
     <h2 class="d-flex flex-column align-items-center">
-      Contactame <br /><span class="titulo_spand2 fs-2 fw-bold"
+      Contáctame <br /><span class="titulo_spand2 fs-2 fw-bold"
         >para Conocerme
       </span>
     </h2>
     <p class="px-5">
-      Escríbeme si deseas contactarme, si tienes algún proyecto en mente o
+      Escríbeme si deseas contáctarme, si tienes algún proyecto en mente o
       alguna inquietud, no dudes en llenar este formulario. estoy interesado en
       realizar proyectos como freelance y recibir oportunidades laborales.
     </p>
@@ -54,7 +54,7 @@ export default {
         <div class="pe-5">
           <input
             type="text"
-            class="form-control"
+            class="form_control col-md-12"
             id="nombre"
             name="nombre"
             v-model="formData.nombre"
@@ -65,7 +65,7 @@ export default {
         <div class="pe-5">
           <input
             type="tel"
-            class="form-control"
+            class="form_control col-md-12"
             id="telefono"
             name="telefono"
             v-model="formData.telefono"
@@ -75,7 +75,7 @@ export default {
         <div class="pe-5">
           <input
             type="email"
-            class="form-control"
+            class="form_control col-md-12"
             id="correo"
             name="correo"
             v-model="formData.correo"
@@ -87,7 +87,7 @@ export default {
         <div class="pe-5">
           <input
             type="text"
-            class="form-control"
+            class="form_control col-md-12"
             id="asunto"
             name="asunto"
             v-model="formData.asunto"
@@ -97,19 +97,21 @@ export default {
         </div>
         <div class="pe-5">
           <textarea
-            class="form-control"
+            class="form_control col-md-12"
             id="mensaje"
             name="mensaje"
             rows="3"
             v-model="formData.mensaje"
             placeholder="Mensaje"
           ></textarea>
+        </div>
+        <div class="pe-5">
           <button type="submit" class="button_contact mt-2">Enviar</button>
         </div>
       </form>
       <!-- <div class="row flex-column justify-content-start ms-5 gap-4 fs-5"> -->
-      <div class="row col-md-6 px-5 gap-4 pt-3">
-        <!-- <div class="round_botton"> -->
+      <div class="row px-5 pt-2 col-md-6 gap-4 align-self-baseline">
+        <!-- <div class=""> -->
         <a
           target="_blank"
           href="https://wa.me/message/F74B2XUM7BXCP1"
@@ -119,6 +121,7 @@ export default {
           Teléfono: +573026685405</a
         >
         <!-- </div> -->
+        <!-- <div class="p-0"> -->
         <a
           target="_blank"
           href="mailto: luiz_fernando316@hotmail.com"
@@ -126,9 +129,12 @@ export default {
           ><i class="fa-solid fa-envelope" /> Correo:
           luiz_fernando316@hotmail.com</a
         >
+        <!-- </div> -->
+        <!-- <div> -->
         <div class="round_botton">
           <i class="fa-solid fa-location-dot"></i> Bucaramanga, Colombia
         </div>
+        <!-- </div> -->
       </div>
     </div>
   </div>
@@ -145,7 +151,7 @@ export default {
   padding: 0;
 }
 .content_form {
-  width: 95%;
+  width: 100%;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   color: #ffffff;
@@ -163,7 +169,7 @@ export default {
   position: relative;
 }
 
-.form-control {
+.form_control {
   box-shadow: none;
   height: 44px;
   border: 1px solid #0cfca7;
@@ -175,7 +181,7 @@ export default {
   padding: 10px 20px;
   transition: border 0.3s ease-in-out;
 }
-.form-control:focus {
+.form_control:focus {
   box-shadow: none;
   height: 44px;
   border: 1px solid #010b15;
@@ -187,11 +193,12 @@ export default {
   padding: 10px 20px;
   transition: border 0.3s ease-in-out;
 }
-.form-control::placeholder {
+.form_control::placeholder {
   color: #ccc; /* Cambia el color del placeholder */
 }
 
 .round_botton {
+  max-width: 400px;
   padding: 0.5em 2em;
   border: 2px solid #0cfca7;
   border-radius: 2em;

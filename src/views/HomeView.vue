@@ -8,14 +8,16 @@ import Footer from "@/components/Footer.vue";
 
 <template>
   <main>
-    <Home />
+    <div class="px-2">
+      <Home />
+    </div>
     <div class="margin">
       <Habilitys />
     </div>
     <div class="margin">
       <Projects />
     </div>
-    <div class="margin">
+    <div class="margin p-3">
       <Contact />
     </div>
     <div class="margin">
@@ -26,6 +28,6 @@ import Footer from "@/components/Footer.vue";
 
 <style>
 .margin {
-  margin-top: 70px;
+  margin-top: 20px;
 }
 </style>

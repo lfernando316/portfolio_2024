@@ -18,6 +18,15 @@ const router = createRouter({
     //   component: () => import('../views/AboutView.vue')
     // }
   ],
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return { el: to.hash, top: 75 }; // Ajusta el margen superior según la altura de tu barra de navegación
+    } else if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { left: 0, top: 0 };
+    }
+  },
 });
 
 export default router;
