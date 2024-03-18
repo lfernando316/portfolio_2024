@@ -3,9 +3,11 @@
 <template>
   <div class="d-flex flex-column align-items-center" id="habilidades">
     <h2 class="fs-1 text-white fw-bold">Mis Habilidades</h2>
-    <p class="text-center">
-      He desarrollado proyectos y en constante capacitacion en las siguientes
-      tecnologias <br />
+    <p
+      class="text-center animate__animated animate__backInLeft animate__delay-2s"
+    >
+      He desarrollado proyectos y en constante capacitación en las siguientes
+      tecnologías <br />
       lo cual me hace una persona versatil para trabajar en cualquiera de las
       áreas.
     </p>
@@ -97,11 +99,7 @@
       >
         <img class="icon_cert" src="/graduado.svg" alt="" />
         <h2 class="fs-3 text-white fw-bold">Academlo</h2>
-        <!-- <p class="px-2">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea provident
-          laborum, maxime, nemo, nesciunt sed recusandae, quisquam nemo ut
-          necessitatibus.
-        </p> -->
+
         <ul class="align-self-start">
           <li>
             <a
@@ -143,11 +141,7 @@
       >
         <img class="icon_cert" src="/computer.svg" alt="" />
         <h2 class="fs-3 text-white fw-bold">Platzi</h2>
-        <!-- <p class="px-2">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea provident
-          laborum, maxime, nemo, nesciunt sed recusandae, quisquam nemo ut
-          necessitatibus.
-        </p> -->
+
         <ul class="align-self-start">
           <li>
             <a
@@ -180,11 +174,7 @@
       >
         <img class="icon_cert" src="/certificado.svg" alt="" />
         <h2 class="fs-3 text-white fw-bold">CoderHouse</h2>
-        <!-- <p class="px-2">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea provident
-          laborum, maxime, nemo, nesciunt sed recusandae, quisquam nemo ut
-          necessitatibus.
-        </p> -->
+
         <ul class="align-self-start">
           <li>
             <a
@@ -212,7 +202,6 @@
 }
 
 .card1 {
-  /* Personaliza el borde, el espacio, el sombreado, etc. */
   width: 100%;
   border: none !important;
   border-radius: 10px;

@@ -1,22 +1,26 @@
-<script>
-export default {
-  name: "MiComponente",
-  data() {
-    return {
-      images: [
-        { src: "/imagen1.jfif" },
-        { src: "/imagen2.jfif" },
-        { src: "/imagen3.jfif" },
-        { src: "/imagen4.jfif" },
-        { src: "/imagen5.jfif" },
-      ],
-    };
-  },
-};
+<script setup>
+import { RouterLink } from "vue-router";
+import { ref } from "vue";
+
+const images = ref([
+  { src: "/imb_backend.webp" },
+  { src: "/nodejs.webp" },
+  { src: "/JavaScript.webp" },
+  { src: "/postgresql.webp" },
+  { src: "/django.webp" },
+]);
+const images2 = ref([
+  { src: "/trabajo_equipo.webp" },
+  { src: "/react.webp" },
+  { src: "/pseudo.webp" },
+  { src: "/basededatos.webp" },
+  { src: "/compProgramando.webp" },
+]);
 </script>
 
 <template>
   <div class="row flex-wrap col-12 justify-content-between contain" id="home">
+    <!-- animate__animated animate__backInLeft animate__delay-1s -->
     <div class="col-md-6 home">
       <h1 class="titulo">
         <span class="titulo_span1">Hola,</span><br />
@@ -35,8 +39,27 @@ export default {
         a objetivos, priorizando siempre la calidad del código como clave del
         proyecto.
       </p>
-      <div class="d-flex justify-content-between mt-4">
-        <button class="button_contact">Contáctame</button>
+      <div class="d-flex justify-content-between flex-wrap mt-4">
+        <div class="d-flex gap-3">
+          <button class="button_contact">
+            <router-link
+              style="color: #06071b"
+              class="text-decoration-none"
+              to="#contacto"
+            >
+              Contáctame</router-link
+            >
+          </button>
+          <button class="button_contact button_cv">
+            <a
+              style="color: #0cfca7"
+              class="text-decoration-none"
+              href="/Luis_fernando_salcedo_cv.pdf"
+              target="_blank"
+              >Descargar CV</a
+            >
+          </button>
+        </div>
         <div class="d-flex gap-3 align-items-center fs-1 me-3">
           <a
             href="https://www.linkedin.com/in/luis-fernando-salcedo"
@@ -53,8 +76,6 @@ export default {
       </div>
     </div>
 
-    <!-- <div>holaaaa</div> -->
-    <!-- <div class="d-flex justify-content-end"> -->
     <div class="container col-md-6 col-12">
       <div class="row flex-nowrap col-12 justify-content-end">
         <div class="overflow_container">
@@ -78,16 +99,15 @@ export default {
         </div>
         <div class="overflow_container">
           <div class="contImg2 d-flex flex-column">
-            <!-- Duplicamos las imágenes para lograr el efecto continuo -->
             <img
-              v-for="(image, index) in images"
+              v-for="(image, index) in images2"
               :src="image.src"
               :alt="'Imagen ' + (index + 1)"
               :key="'top-' + index"
               class="mb-3"
             />
             <img
-              v-for="(image, index) in images"
+              v-for="(image, index) in images2"
               :src="image.src"
               :alt="'Imagen ' + (index + 1)"
               :key="'bottom-' + index"
@@ -97,12 +117,10 @@ export default {
         </div>
       </div>
     </div>
-    <!-- </div> -->
   </div>
 </template>
 
 <style>
-/* padding: 8px; */
 .contain {
   margin-top: 75px;
 }
@@ -124,32 +142,23 @@ export default {
   color: #ffffff;
 }
 
-/* .titulo_spand2 {
-  background: #1b98f5;
-  background: linear-gradient(to right, #1b98f5 22%, #0df4ad 75%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */
-
-/* overflow: hidden; */
 .container {
   padding: 0;
-  /* padding-left: 60px; */
 }
 .overflow_container {
   overflow: hidden;
-  height: 500px; /* Ajusta la altura según tus necesidades */
+  height: 500px;
   width: 200px;
   padding: 0;
 }
 
 .contImg {
-  animation: scrollUp 20s linear infinite; /* Ajusta la duración de la animación según tus necesidades */
+  animation: scrollUp 20s linear infinite;
   margin-right: 10px;
 }
 
 .contImg2 {
-  animation: scrollUp 30s linear infinite; /* Ajusta la duración de la animación según tus necesidades */
+  animation: scrollUp 30s linear infinite;
 }
 
 @keyframes scrollUp {
@@ -186,5 +195,9 @@ export default {
   25% {
     transform: rotate(-8deg);
   }
+}
+
+.button_cv {
+  background-color: transparent;
 }
 </style>

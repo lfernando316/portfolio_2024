@@ -83,11 +83,11 @@ const closeMenu = () => {
 }
 
 .navbar-nav .nav-item .nav-link {
-  color: #0df4ad; /* Cambio de color del texto del enlace */
+  color: #0df4ad;
 }
 
 .custom-toggler-icon:active {
-  filter: brightness(0) invert(1); /* Cambiar color del icono cuando está activo */
+  filter: brightness(0) invert(1);
 }
 .navbar-nav {
   width: 120%;
@@ -95,7 +95,6 @@ const closeMenu = () => {
 }
 
 .container-fluid {
-  padding-left: 0; /* Eliminar el relleno izquierdo del contenedor */
+  padding-left: 0;
 }
-/* Estilos para dispositivos pequeños */
 </style>

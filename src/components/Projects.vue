@@ -22,9 +22,7 @@
     >
       <swiper-slide class="p-5" v-for="image in images" :key="image.src">
         <div class="card">
-          <!-- <div class="card-img"> -->
           <img :src="image.src" :alt="image.alt" />
-          <!-- </div> -->
           <div class="card-description">
             <div class="card-title">
               <h4>{{ image.title }}</h4>
@@ -66,7 +64,7 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import { ref } from "vue"; // Importamos ref y watch
+import { ref } from "vue";
 
 export default {
   components: {
@@ -75,6 +73,33 @@ export default {
   },
   setup() {
     const images = [
+      {
+        src: "/shortcuturl.webp",
+        alt: "imagen_app",
+        title: "Shortcut URL",
+        urlCodigo: "https://github.com/lfernando316/apiREst_express_mongodb",
+        urlProyecto: "https://shortcuturl.netlify.app/register",
+        description:
+          "Aplicación Full Stack con Vue.js y MongoDB: Autenticación JWT, registro de usuarios, inicio de sesión y gestión de enlaces cortos. Utiliza Express y CORS en el servidor, con diseño estilizado del framework de Quasar.",
+      },
+      {
+        src: "/planificador_gastos.webp",
+        alt: "imagen_app",
+        title: "Planificar de gastos",
+        urlCodigo: "https://github.com/lfernando316/controlGastos",
+        urlProyecto: "https://controlgastoslfsr.netlify.app/",
+        description:
+          "Aplicación React para presupuesto personal: Filtra, crea, edita y elimina gastos. Almacena datos en el local storage. Destacando habilidades en desarrollo front-end y uso de almacenamiento local.",
+      },
+      {
+        src: "/citas_veterinaria.webp",
+        alt: "imagen_app",
+        title: "CRUD para citas",
+        urlCodigo: "https://github.com/lfernando316/generadorCitas",
+        urlProyecto: "https://citasreactlfsr.netlify.app/",
+        description:
+          "CRUD de Citas Veterinarias: Aplicación en React con maquetación en Tailwind CSS. Permite crear, leer, actualizar y eliminar citas. Utiliza almacenamiento local.",
+      },
       {
         src: "/screenshotrickandmorty.png",
         alt: "imagen_app",
@@ -121,15 +146,6 @@ export default {
           "https://github.com/lfernando316/BananaBurguesa-luisFernandoSalcedo",
         urlProyecto: "https://bananaburguesa.netlify.app",
         description: "Sitio Web creado con HTML y CSS usando el framework SASS",
-      },
-      {
-        src: "/bananaburguesa.png",
-        alt: "Imagen 3",
-        title: "Descripción",
-        urlCodigo: "https://github.com/lfernando316/Weather-App",
-        urlProyecto: "https://weather-app-lfsr.netlify.app",
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos deserunt animi inventore repellat illo sunt error consequuntur odit ducimus eaque.",
       },
       {
         src: "/bananaburguesa.png",
@@ -187,13 +203,13 @@ export default {
 
 .swiper-slide {
   display: flex;
-  justify-content: center; /* Alinea las tarjetas al centro */
+  justify-content: center;
 }
 
 .card {
-  width: 250px; /* Ancho de cada tarjeta */
+  width: 280px;
   height: 450px;
-  margin-right: 10px; /* Espacio entre tarjetas */
+  margin-right: 10px;
   position: relative;
   position: relative;
   overflow: hidden;
@@ -203,12 +219,13 @@ export default {
   overflow-wrap: normal;
   background-color: rgba(255, 255, 255, 0.05);
   border: 2px solid rgba(255, 255, 255, 0.05);
+  font-size: 14px;
 }
 
 .card img {
   width: 100%;
   height: 200px;
-  margin: 0; /* Elimina el margen */
+  margin: 0;
   padding: 0;
 }
 

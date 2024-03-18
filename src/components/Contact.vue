@@ -109,9 +109,7 @@ export default {
           <button type="submit" class="button_contact mt-2">Enviar</button>
         </div>
       </form>
-      <!-- <div class="row flex-column justify-content-start ms-5 gap-4 fs-5"> -->
       <div class="row px-5 pt-2 col-md-6 gap-4 align-self-baseline">
-        <!-- <div class=""> -->
         <a
           target="_blank"
           href="https://wa.me/message/F74B2XUM7BXCP1"
@@ -120,8 +118,6 @@ export default {
           <i class="fa-brands fa-whatsapp" />
           Teléfono: +573026685405</a
         >
-        <!-- </div> -->
-        <!-- <div class="p-0"> -->
         <a
           target="_blank"
           href="mailto: luiz_fernando316@hotmail.com"
@@ -129,24 +125,15 @@ export default {
           ><i class="fa-solid fa-envelope" /> Correo:
           luiz_fernando316@hotmail.com</a
         >
-        <!-- </div> -->
-        <!-- <div> -->
         <div class="round_botton">
           <i class="fa-solid fa-location-dot"></i> Bucaramanga, Colombia
         </div>
-        <!-- </div> -->
       </div>
     </div>
   </div>
 </template>
 
 <style>
-/* .content_form {
-  width: 350px;
-  border: 3px;
-  border-radius: 10px;
-  background-color: white;
-} */
 .no-padding {
   padding: 0;
 }
@@ -194,7 +181,7 @@ export default {
   transition: border 0.3s ease-in-out;
 }
 .form_control::placeholder {
-  color: #ccc; /* Cambia el color del placeholder */
+  color: #ccc;
 }
 
 .round_botton {
@@ -203,7 +190,7 @@ export default {
   border: 2px solid #0cfca7;
   border-radius: 2em;
   background: transparent;
-  box-shadow: 0px 1px 2px #1b98f5; /* Añade sombra */
+  box-shadow: 0px 1px 2px #1b98f5;
   opacity: 0.8;
   transition: opacity 0.3s ease;
 }
